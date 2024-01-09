@@ -15,14 +15,9 @@ export const handler = async (event: any) => {
     return {
         statusCode: 200,
         body: JSON.stringify({
-            message: "test success 2",
+            message: "test success",
             body: ""
-        }),
-        headers: {
-            'Access-Control-Allow-Origin': '*',
-            'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, UPDATE',
-            'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization'
-        },
+        })
     };
 
     let res: any = ""
@@ -49,12 +44,7 @@ export const handler = async (event: any) => {
             body: JSON.stringify({
                 message: res.message,
                 error: res.error
-            }),
-            headers: {
-                'Access-Control-Allow-Origin': '*',
-                'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, UPDATE',
-                'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization'
-            },
+            })
         }
     }
     return {
@@ -62,12 +52,7 @@ export const handler = async (event: any) => {
         body: JSON.stringify({
             message: res.message,
             body: res.body
-        }),
-        headers: {
-            'Access-Control-Allow-Origin': '*',
-            'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, UPDATE',
-            'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization'
-        },
+        })
     };
 
 };

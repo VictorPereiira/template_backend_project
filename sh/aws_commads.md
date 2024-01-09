@@ -14,3 +14,4 @@ aws lambda delete-function --function-name NOME_DA_FUNCAO
 
 # DyanomoDb
 aws dynamodb list-tables
+aws dynamodb delete-table --table-name TABLE_NAME
